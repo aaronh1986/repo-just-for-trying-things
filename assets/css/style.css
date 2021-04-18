@@ -1,32 +1,3 @@
-h1::before {
-    content: "YES ";
-}
-
-h1::after {
-    content: " IT WORKED";
-}
-
-.main-heading::before {
-    content: "hello, ";
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-}
-
-.main-heading::after {
-    content: " ,good stuff";
-}  /*I guess due to specification*/
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 5px;
-}
-
-.controls{
-    display: flex;
-    justify-content: space-around;
-}
-
-.controls-btn2 {
-    display: none;
+* {
+    font-size: 2rem;
 }
