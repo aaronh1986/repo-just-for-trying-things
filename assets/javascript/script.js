@@ -1,59 +1,33 @@
-/* function calculateAnswer() {
-    let numberOne = Math.floor(Math.random() * 25) + 1;
-    let numberTwo = Math.floor(Math.random() * 25) + 1;
-    let firstValue = document.getElementById('first');
-    let secondValue = document.getElementById('second');
-    firstValue.innerHTML = numberOne;
-    secondValue.innerHTML = numberTwo;  
-    let submit = document.getElementById('submit');
-    let answer = document.getElementById('answer');
-    answer.focus();
-    submit.addEventListener('click', function() {
-if (answer.value == numberOne + numberTwo) {
-    alert('I guess you\'re not a fucking idiot after all.')
-    resetGame();
-} else {
-    alert('NOOOOOOOOOOOOOO, WROOOOOOOOOOOOOOOONG')
-   resetGame();
-}
-})
+function showTime() {
+// Get current hours, mins and seconds from the new Date() method
+const date = new Date()
+var currentHour = date.getHours();
+var currentMin = date.getMinutes();
+var currentSec = date.getSeconds();
+var session = "AM"
+
+// Add a 0 to minutes and seconds so that if under 10 to have two digits
+currentHour = (currentHour < 10) ? "0" + currentHour : currentHour;
+currentMin = (currentMin < 10) ? "0" + currentMin : currentMin;
+currentSec = (currentSec < 10) ? "0" + currentSec : currentSec;
+
+// Create a 12-hour clock
+if(currentHour == 0) {
+    currentHour = 12;
 }
 
-calculateAnswer();
-
-function resetGame() {
-    let answer = document.getElementById('answer');
-    answer.value="";
-    let numberOne = Math.floor(Math.random() * 25) + 1;
-    let numberTwo = Math.floor(Math.random() * 25) + 1;
-    let firstValue = document.getElementById('first');
-    let secondValue = document.getElementById('second');
-    firstValue.innerHTML = numberOne;
-    secondValue.innerHTML = numberTwo;  
-    
+if (currentHour > 12) {
+    currentHour = currentHour - 12;
+    session = "PM"
 }
 
- */
+// Show time in hour:mins:sec format and insert into the DOM
+const currentTime = currentHour + ":" + currentMin + ":" + currentSec + " " + session;
+const time = document.querySelector('[data-time]');
+time.innerText = currentTime;
 
-class Square {
-
-    constructor(_width, _color) {
-        this.width = _width;
-        this.height = _width;
-        this.color = _color;
-    }
-
-    getArea() {
-        return this.width * this.height;
-    }
-
-    printDescription() {
-        console.log(`Call me a square, and say that I am ${this.width} mega bits wide and ${this.height} ultra heights high. Then tell me that I am ${this.color}. I'll tell you that you are correct.`)
-    }
+// Make the function repeat every second so as to function as an accurate clock
+setTimeout(showTime, 1000);
 }
 
-let squareOne = new Square(100, "red");
-let squareTwo = new Square(4, "blue");
-
-console.log(squareTwo.getArea());
-console.log(squareOne.printDescription());
+showTime();
