@@ -1,7 +1,11 @@
+body {
+   font-family: "Times new roman", sans-serif;
+}
+
 .clock {
      color: blue;
-     display: grid;
-     align-content: center;
-     justify-content: center;
-     min-height: 100vh;
+     position: absolute;
+     right: 0px;
+     margin: 15px;
+     font-size: 1.5rem;
 }
