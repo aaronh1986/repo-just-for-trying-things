@@ -1,11 +1,4 @@
-body {
-   font-family: "Times new roman", sans-serif;
-}
-
-.clock {
-     color: blue;
-     position: absolute;
-     right: 0px;
-     margin: 15px;
-     font-size: 1.5rem;
+#clock {
+   position: absolute;
+   left: 73%;
 }
