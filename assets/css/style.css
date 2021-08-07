@@ -1,4 +1,21 @@
-#clock {
-   position: absolute;
-   left: 73%;
+.card-container {
+   display: flex;
+   justify-content: space-around;
 }
+
+
+
+.card img {
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+}
+
+/*.orange {
+   background-color: orange;
+}
+
+.blue {
+   background-color: blue;
+}*/
+

@@ -1,38 +1,32 @@
-function showTime() {
-    currentTime = new Date()
-    h = currentTime.getHours();
-    m = currentTime.getMinutes();
-    s = currentTime.getSeconds();
-    message = ""
+/* let card = document.getElementById('card');
+card.addEventListener('click', () => {
+    card.classList.remove('blue');
+    card.classList.add('orange');
+}) */
 
-    h = (h < 10) ? "0" + h:h;
-    m = (m < 10) ? "0" + m:m;
-    s = (s < 10) ? "0" + s:s;
- 
-    if (h > 0) {
-        message = "On seas with goal of day"
-    }
+/*let cards = Array.from(document.getElementsByClassName('card'));
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        if(card.classList.contains('blue')){
+          card.classList.remove('blue');
+          card.classList.add('orange');
+        }else if(card.classList.contains('orange')) {
+          card.classList.remove('orange');
+          card.classList.add('blue');
+        }
+    })
+}) */
 
-    if(h > 5) {
-        message = "Day break and toil on the path"
-    }
+let cards = Array.from(document.getElementsByClassName('card'));
+let images = Array.from(document.getElementsByClassName('band'));
 
-    if(h > 12) {
-        message = "Good Afternoon, a break and back to the field"
-    }
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+       if(alt="Buzz") {
+            src = "assets/images/melvins.jpg"
+       }
+    })
+})
 
-    if(h > 18) {
-        message = "Land search for night shore"
-    }
 
-    if(h > 21) {
-        message = "Go with the flow"
-    }
 
-    time = h + ":" + m + ":" + s + " " + message;
-
-    document.getElementById("clock").innerText = time;
-    setInterval(showTime, 1000);
-}
-
-showTime();
