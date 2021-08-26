@@ -8,6 +8,44 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
+<script>
+    function manage(txt) {
+        var button = document.getElementById('btSubmit');
+        if (txt.value != '') {
+            button.disabled = false;
+        } else {
+            button.disabled = true;
+        }
+    }
+
+    function abled(balls) {
+        var button = document.getElementById('submitBtn');
+        if(balls.value != '') {
+            button.disabled = false;
+        } else {
+            button.disabled = true;
+        }
+    }
+
+    function works(hello) {
+        var bbttnn = document.getElementById('btnForSubmit');
+        if (hello.value != '') {
+            bbttnn.disabled = false;
+        } else {
+            bbttnn.disabled = true;
+        }
+    }
+</script>
+
+<input type="text" id="txt" onkeyup="manage(this)">
+<input type="submit" id="btSubmit" disabled value="Submit">
+
+<input type="text" id="balls" onkeyup="abled(this)">
+<input type="submit" id="submitBtn" disabled value="submit">
+
+<input type="text" id="fuck" onkeyup='works(this)'>
+<input type="submit" id="btnForSubmit" disabled value="submit">
+
 <body>
     <div class="card-container">
         <div class="card"><img class="band" alt="Buzz" src="assets/images/buzz.jpeg"></div>
