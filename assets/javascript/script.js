@@ -17,3 +17,25 @@ function bollocks() {
     }
 }
 
+
+function testTheCheatsheet() {
+    let str = "mgnbrch"
+    console.log(str.charAt(1))
+    let length = str.length
+    console.log(length)
+    console.log(str.concat(" Wlfckwmnnxtmnth"))
+    console.log(str.endsWith('hello'));
+    console.log((str.includes('br')));
+    console.log(str.indexOf('c'));
+    console.log(str.search('g'));
+    console.log(str.slice(0, 7));
+    console.log(str.split(""));
+    console.log(str.startsWith('hello'));
+    console.log(str.substring(0, 4))
+    let upper = str.toUpperCase()
+    console.log(upper);
+    console.log(upper.toLowerCase())
+    console.log("       mgnbrch".trim())
+}
+
+testTheCheatsheet();
